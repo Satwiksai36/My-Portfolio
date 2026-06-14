@@ -1,107 +1,114 @@
-# Satwik Sai's Portfolio Website
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/logo/weblogo-white.png">
+    <source media="(prefers-color-scheme: light)" srcset="public/logo/weblogo-black.png">
+    <img alt="Satwik Sai Logo" src="public/logo/weblogo-black.png" width="240" />
+  </picture>
+</p>
 
-A modern, interactive portfolio website built with cutting-edge web technologies. This project showcases my work, skills, and experience using Next.js with advanced animations and 3D graphics.
+<h1 align="center">Veera Satwik Sai — Portfolio</h1>
 
-## 🚀 Features
+<p align="center">
+  <strong>A premium, high-performance interactive portfolio built using Next.js 16, React 19, and advanced WebGL/3D graphics.</strong>
+</p>
 
-- **Next.js 16** - Modern React framework with server-side rendering and static generation
-- **React 19** - Latest React features and performance improvements
-- **3D Graphics** - Three.js integration with React Three Fiber for immersive 3D elements
-- **Smooth Animations** - GSAP, Framer Motion, and Anime.js for fluid, professional animations
-- **Responsive Design** - Tailwind CSS for beautiful, responsive layouts
-- **AI Integration** - Anthropic SDK for intelligent features
-- **Smooth Scrolling** - Lenis for high-performance scroll animations
+---
+
+## 🚀 Key Features
+
+* **Advanced 3D WebGL Elements** — Implemented using **Three.js** and **React Three Fiber (R3F)** for immersive interactive elements.
+* **Liquid Animations & Micro-interactions** — Built with **GSAP**, **Framer Motion**, and **Anime.js** for smooth, studio-grade transitions.
+* **Integrated AI Chatbot Assistant** — Powered by the **Gemini / Anthropic / OpenAI APIs** to answer client inquiries about technical skills, education, and experience.
+* **Administrative Control Panel** — Secure dashboard to update portfolio projects, timeline items, services, skills, and check client messages/inquiries.
+* **Ultra-smooth Scrolling** — Powered by **Lenis Scroll** for premium feel and high-performance inertia scroll.
+* **Perfect SEO & Schema Markups** — Automatically structured JSON-LD schemas (Person, WebSite, ProfilePage) for professional search rankings.
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 16.2.6
-- **Language:** TypeScript (97.4%)
-- **Styling:** Tailwind CSS 4
-- **Animations:** GSAP, Framer Motion, Anime.js
-- **3D Graphics:** Three.js, React Three Fiber
-- **Email Service:** Resend
-- **Icons:** Lucide React
-- **Package Manager:** npm
+| Component | Technology |
+| :--- | :--- |
+| **Framework** | Next.js 16.2.6 (Turbopack / Webpack) |
+| **Core Library** | React 19.0.0 |
+| **Styling** | Tailwind CSS 4.0 |
+| **3D Engine** | Three.js & React Three Fiber |
+| **Animations** | GSAP, Framer Motion, Anime.js |
+| **Scroller** | Lenis Scroll |
+| **Database/Storage** | Local structured JSON storage with API endpoints |
+| **Icons** | Lucide React |
 
-## 📋 Prerequisites
-
-Before you begin, ensure you have the following installed:
-- Node.js (v18 or higher recommended)
-- npm or your preferred package manager
+---
 
 ## 🎯 Getting Started
 
+### Prerequisites
+
+Ensure you have **Node.js (v18.0.0 or higher)** and **npm** installed.
+
 ### Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/Satwiksai36/My-Portfolio.git
-cd My-Portfolio
-Install dependencies:
-bash
-npm install
-Development
-Run the development server:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Satwiksai36/My-Portfolio.git
+   cd My-Portfolio
+   ```
 
-bash
-npm run dev
-Open http://localhost:3000 in your browser to see the result.
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-The application will auto-reload as you make changes to app/page.tsx.
+3. **Set up Environment Variables:**
+   Create a `.env.local` file in the root directory and add your keys for the AI chatbot (optional):
+   ```env
+   # Add one or more keys to enable the AI assistant:
+   GEMINI_API_KEY=your_gemini_api_key
+   ANTHROPIC_API_KEY=your_anthropic_api_key
+   OPENAI_API_KEY=your_openai_api_key
 
-Building for Production
-Create an optimized production build:
+   # Set admin panel password (defaults to "admin" if omitted):
+   ADMIN_PASSWORD=your_admin_password
+   ```
 
-bash
-npm run build
-Start the production server:
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-bash
-npm start
-Linting
-Check code quality:
+---
 
-bash
-npm run lint
+## 📁 Project Structure
 
-📁 Project Structure
-app/ - Next.js app directory with page components
-components/ - Reusable React components
-public/ - Static assets
-styles/ - CSS and Tailwind configuration
-tsconfig.json - TypeScript configuration
+```text
+├── src/
+│   ├── app/                # Next.js App Router (pages, API routes, layout)
+│   │   ├── admin/          # Administrative panel interface
+│   │   ├── api/            # API endpoints (auth, upload, chat, contact)
+│   │   └── layout.tsx      # Global layouts, SEO tags, & Schema markups
+│   ├── components/         # Reusable interactive React components
+│   └── lib/                # Contexts, themes, helper hooks, and JSON data
+├── public/                 # Static assets, local logos, and media uploads
+├── tsconfig.json           # TypeScript configuration
+└── tailwind.config.ts      # Tailwind CSS layout configs
+```
 
-🎨 Key Technologies
-Animation Libraries
-GSAP - High-performance JavaScript animations
-Framer Motion - React animation library
-Anime.js - Lightweight animation library
-3D Graphics
-Three.js - JavaScript 3D library
-React Three Fiber - React renderer for Three.js
-React Three Postprocessing - Post-processing effects for 3D
-UI & Design
-Tailwind CSS - Utility-first CSS framework
-Lucide React - Modern icon library
+---
 
-🚀 Deployment
-This project is optimized for deployment on Vercel (the creators of Next.js):
+## 🚀 Deployment
 
-Push your code to GitHub
-Connect your repository to Vercel
-Vercel will automatically detect Next.js and deploy with optimal settings
-For other deployment options, see the Next.js deployment documentation.
+The project is fully optimized for **Vercel**:
+1. Push your updated code to your GitHub repository.
+2. Import the repository in your Vercel Dashboard.
+3. Configure the Environment Variables in Vercel settings if needed.
+4. Click **Deploy**!
 
-📚 Learn More
-Next.js Documentation - Learn about Next.js features
-Three.js Documentation - 3D graphics guide
-Tailwind CSS Documentation - Styling guide
-GSAP Documentation - Animation guide
+---
 
-📄 License
-This project is open source and available under the MIT License.
+## 👨‍💻 Author
 
-👨‍💻 Author
-Satwik Sai - GitHub Profile
-
-Feel free to explore the code, and don't hesitate to reach out with questions or feedback!
+- **Veera Satwik Sai**
+- **GitHub:** [@Satwiksai36](https://github.com/Satwiksai36)
+- **LinkedIn:** [Veera Satwik Sai](https://www.linkedin.com/in/satwiksaiveera/)
+- **Email:** satwiksai36@gmail.com
