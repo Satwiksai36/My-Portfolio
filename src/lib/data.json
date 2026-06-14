@@ -1,0 +1,468 @@
+{
+  "fullName": "Veera Satwik Sai",
+  "firstName": "Veera",
+  "lastName": "Satwik Sai",
+  "brandName": "",
+  "title": "Software Engineer | AI/ML Engineer | Full Stack Developer",
+  "tagline": "Software Engineer | AI/ML Engineer | Full Stack Developer",
+  "shortBio": "I am a Software Engineer and AI/ML practitioner specializing in scalable, full-stack applications and intelligent pipelines. Operating at the intersection of applied machine learning and production-grade engineering, I focus on building robust, observable, and maintainable systems at scale.",
+  "subBio": "Driven by a product-first philosophy, I ensure my technical decisions—from architecting microservices to deploying transformer models—deliver measurable impact through clean abstractions and minimal operational overhead. I continuously refine my enterprise competencies through open-source contributions, competitive programming, and targeted certifications across cloud, networking, and AI domains.",
+  "email": "satwiksai36@gmail.com",
+  "location": "Remote · Worldwide",
+  "responseTime": "Within 24 hours",
+  "statusText": "Available for projects",
+  "availabilityStatus": "Available for Work",
+  "resumeUrl": "",
+  "resumeFilename": "",
+  "headshotImage": "",
+  "baseUrl": "",
+  "twitterHandle": "",
+  "logoWhite": "/logo/weblogo-white.png",
+  "logoWhiteHorizontal": "/logo/weblogo-white.png",
+  "logoBlack": "/logo/weblogo-black.png",
+  "logoBlackHorizontal": "/logo/weblogo-black.png",
+  "heroVideo": "/hero_vid_revamp_opt.mp4",
+  "heroPoster": "/hero_revamp_poster.jpg",
+  "socials": {
+    "github": "https://github.com/Satwiksai36",
+    "linkedin": "https://www.linkedin.com/in/satwiksaiveera/",
+    "x": "https://x.com/satwiksai369",
+    "instagram": "https://www.instagram.com/satwikk._.saiii/",
+    "leetcode": "https://leetcode.com/u/satwik_sai36/"
+  },
+  "stats": [
+    {
+      "label": "Years of Experience",
+      "target": 5,
+      "suffix": "+"
+    }
+  ],
+  "heroStackTags": [
+    "Next.js",
+    "Django",
+    "Go",
+    "PostgreSQL",
+    "AWS",
+    "Docker"
+  ],
+  "floatingWords": [
+    "Python",
+    "TypeScript",
+    "JavaScript",
+    "SQL",
+    "Next.js",
+    "React",
+    "Django",
+    "Node.js",
+    "Express",
+    "TailwindCSS",
+    "PostgreSQL",
+    "Redis",
+    "AWS",
+    "Docker",
+    "MongoDB",
+    "REST APIs"
+  ],
+  "credentialsFloatWords": [
+    "Certified",
+    "Verified",
+    "2025",
+    "Full Stack",
+    "IBT Learning",
+    "2024",
+    "Moat Academy",
+    "Zidio",
+    "Engineering",
+    "Development",
+    "Backend",
+    "Frontend",
+    "Internship",
+    "PostgreSQL",
+    "Accredited",
+    "Remote",
+    "Awarded",
+    "Completed",
+    "5+ Years",
+    "Production"
+  ],
+  "skillsHeadline1": "Built to Scale.",
+  "skillsHeadline2": "Engineered.",
+  "skillsTagline": "Production-grade systems built with a modern, battle-tested stack.",
+  "customTechLogos": {
+    "Java": "https://cdn.simpleicons.org/openjdk",
+    "C": "https://cdn.simpleicons.org/c",
+    "HTML": "https://cdn.simpleicons.org/html5",
+    "CSS": "https://cdn.simpleicons.org/css",
+    "Figma": "https://cdn.simpleicons.org/figma",
+    "FastAPI": "https://cdn.simpleicons.org/fastapi",
+    "GitHub": "https://cdn.simpleicons.org/github/_/fff",
+    "Git": "https://cdn.simpleicons.org/git",
+    "N8N": "https://cdn.simpleicons.org/n8n",
+    "Kubernetes": "https://cdn.simpleicons.org/kubernetes"
+  },
+  "aboutQuoteWords": [
+    "I",
+    "build",
+    "systems",
+    "that",
+    "don’t",
+    "just",
+    "work",
+    "—",
+    "they",
+    "scale,",
+    "stay",
+    "fast,",
+    "and",
+    "stay",
+    "clean",
+    "under",
+    "pressure."
+  ],
+  "projects": [
+    {
+      "id": "funnel-iq",
+      "name": "Funnel-IQ",
+      "category": "SAAS",
+      "tagline": "🚀 Modern funnel analytics dashboard built with Next.js, TypeScript, Tailwind CSS, and Zustand.",
+      "stack": [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Zustand."
+      ],
+      "image": "/uploads/Screenshot_2026-06-14_153610_1781431688185.png",
+      "year": "2026",
+      "link": "https://funneliqs.netlify.app/",
+      "github": "https://github.com/Satwiksai36/Funnel-IQ"
+    },
+    {
+      "id": "grabaticket",
+      "name": "GrabATicket",
+      "category": "Full Stack",
+      "tagline": "🎟️ A full-stack ticket booking platform for movies, events, plays & sports — with seat selection, food ordering, QR tickets, promo codes, and a powerful admin dashboard. Built with React, TypeScript, Supabase & Tailwind CSS.",
+      "stack": [
+        "React",
+        "TypeScript",
+        "Supabase",
+        "Tailwind CSS."
+      ],
+      "image": "/uploads/Screenshot_2026-06-14_153438_1781432554597.png",
+      "year": "2026",
+      "link": "https://grabatickets.netlify.app/",
+      "github": "https://github.com/Satwiksai36/GrabAticket"
+    },
+    {
+      "id": "finaccess ",
+      "name": "FinAccess",
+      "category": "Financial Inclusion Intelligence",
+      "tagline": "FinAccess is a high-performance backend system designed to evaluate loan applications and predict financial risk using Machine Learning and Deep Learning models.  The system is built to be scalable, explainable, and production-ready. It focuses on strong backend architecture, multithreading, performance optimization, and real-world deployment.",
+      "stack": [
+        "TypeScript",
+        "Python",
+        "CSS"
+      ],
+      "image": "/uploads/1772944578515_1781433071735.png",
+      "year": "2026",
+      "github": "https://github.com/sriharshamanchikanti-stack/FinAccess"
+    },
+    {
+      "id": "axionco",
+      "name": "AxionCo",
+      "category": "AGENCY",
+      "tagline": "AxionCo is a luxury-tech digital agency and AI-powered platform designed to automate marketing, scale operations, and accelerate business growth.",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "image": "/uploads/Screenshot_2026-06-14_153844_1781431743359.png",
+      "year": "2026",
+      "link": "https://axionco.netlify.app/",
+      "github": "https://github.com/Satwiksai36/AxionCo"
+    }
+  ],
+  "education": [
+    {
+      "year": "2024 – Present",
+      "role": "Integrated Master of Technology",
+      "branch": "Software Engineering",
+      "company": "VIT-AP University, Amaravati",
+      "type": "CGPA: 8.0+",
+      "bullets": [
+        "Specializing in advanced software engineering principles, full-stack application architectures, and robust system designs.",
+        "Hands-on coursework covering data structures, object-oriented software engineering, database design, and cloud deployments.",
+        "Actively developing projects focused on clean code, seamless user experiences, and scalable system integration."
+      ],
+      "stack": [],
+      "logo": "/logo/vit-ap logo.png"
+    },
+    {
+      "year": "2022 – 2024",
+      "role": "Intermediate",
+      "branch": "MPC (Mathematics, Physics, Chemistry)",
+      "company": "Sasi Junior College, Mandapeta",
+      "type": "Marks: 959/1000 (95.9%)",
+      "bullets": [
+        "Acquired deep analytical and problem-solving skills through intensive study of Mathematics, Physics, and chemistry (MPC).",
+        "Secured an outstanding academic record of 959 out of 1000 marks (95.9%).",
+        "Formulated strong foundations in logical deduction, algebraic computations, and experimental sciences."
+      ],
+      "stack": [],
+      "logo": "/logo/sasi logo.png"
+    },
+    {
+      "year": "2021 – 2022",
+      "role": "Secondary School (Class 10)",
+      "company": "Mandapeta Public School, Mandapeta",
+      "type": "Marks: 541/600 (90.1%)",
+      "bullets": [
+        "Completed secondary school curriculum with a focus on logical reasoning, fundamental sciences, and mathematics.",
+        "Secured 541 out of 600 marks (90.1%) in the state board examinations.",
+        "Active participant in academic contests, science exhibits, and math quizzes."
+      ],
+      "stack": [],
+      "logo": "/logo/mps logo.png"
+    }
+  ],
+  "services": [
+    {
+      "index": "01",
+      "title": "Full Stack Development",
+      "short": "End-to-end web applications.",
+      "body": "I design and build responsive, high-performance web applications from the ground up. By focusing on clean user interfaces and seamless user experiences, I turn complex requirements into highly functional, interactive digital products that are easy to maintain and scale.",
+      "keywords": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "JavaScript"
+      ]
+    },
+    {
+      "index": "02",
+      "title": "Applied AI Integration",
+      "short": "Embedding smart features into modern applications.",
+      "body": "I bridge the gap between traditional software and artificial intelligence by integrating smart capabilities directly into user-facing platforms. From incorporating predictive forecasting models to leveraging modern AI tools, I build practical, intelligent features that solve real-world problems.",
+      "keywords": [
+        "Machine Learning",
+        "Predictive Models",
+        "XGBoost",
+        "Python"
+      ]
+    },
+    {
+      "index": "03",
+      "title": "API & Backend Systems",
+      "short": "Robust backends designed for scale.",
+      "body": "I develop secure and efficient backend architectures that power modern applications. My focus is on creating clean APIs and structured data flow, ensuring that the frontend and backend communicate flawlessly while maintaining high performance and reliability.",
+      "keywords": [
+        "REST APIs",
+        "Backend Architecture",
+        "System Design",
+        "Node.js"
+      ]
+    },
+    {
+      "index": "04",
+      "title": "Autonomous Agents",
+      "short": "LLM orchestration & intelligent workflows.",
+      "body": "I leverage Large Language Models to create autonomous workflows and intelligent agents that can execute tasks independently. By orchestrating these systems, I automate complex processes, enhance application interactivity, and build forward-looking solutions that go beyond basic chat interfaces.",
+      "keywords": [
+        "LLMs",
+        "AI Agents",
+        "Workflow Automation",
+        "Prompt Engineering"
+      ]
+    },
+    {
+      "index": "05",
+      "title": "Cloud & Database Solutions",
+      "short": "Seamless deployments and secure data management.",
+      "body": "I manage relational data, handle schema migrations, and ensure smooth deployments using modern cloud platforms. By utilizing Backend-as-a-Service tools, I streamline infrastructure management, allowing for secure, scalable, and efficient data handling without the overhead of complex server configurations.",
+      "keywords": [
+        "Supabase",
+        "PostgreSQL",
+        "Netlify",
+        "Cloud Deployment"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "num": "01",
+      "title": "Technology Job Simulation",
+      "issuer": "Deloitte",
+      "year": "2025",
+      "file": "/uploads/1761915785928_1781433044594.png"
+    },
+    {
+      "num": "02",
+      "title": "User Interface & User Experience",
+      "issuer": "Accenture Future Learn",
+      "year": "2025",
+      "file": "/uploads/digital-skills-user-experience_certificate_of_achievement_upem1yj__1__1781432884717.pdf"
+    },
+    {
+      "num": "03",
+      "title": "Java Course",
+      "issuer": "Scalar",
+      "year": "2025",
+      "file": "/uploads/dcc6e59e3f135bfcfeed4a6a62a963b732b73343abca380c2be51a3480bdcbf9_1781433181223.png"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "category": "Languages",
+      "percentage": 90
+    },
+    {
+      "name": "TypeScript",
+      "category": "Languages",
+      "percentage": 95
+    },
+    {
+      "name": "JavaScript",
+      "category": "Languages",
+      "percentage": 95
+    },
+    {
+      "name": "SQL",
+      "category": "Languages",
+      "percentage": 85
+    },
+    {
+      "name": "Next.js",
+      "category": "Frontend",
+      "percentage": 95
+    },
+    {
+      "name": "React",
+      "category": "Frontend",
+      "percentage": 95
+    },
+    {
+      "name": "Django",
+      "category": "Backend & Databases",
+      "percentage": 90
+    },
+    {
+      "name": "Node.js",
+      "category": "Backend & Databases",
+      "percentage": 90
+    },
+    {
+      "name": "Express",
+      "category": "Backend & Databases",
+      "percentage": 85
+    },
+    {
+      "name": "TailwindCSS",
+      "category": "Frontend",
+      "percentage": 95
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Backend & Databases",
+      "percentage": 90
+    },
+    {
+      "name": "Redis",
+      "category": "Backend & Databases",
+      "percentage": 85
+    },
+    {
+      "name": "AWS",
+      "category": "Cloud & Tools",
+      "percentage": 80
+    },
+    {
+      "name": "Docker",
+      "category": "Cloud & Tools",
+      "percentage": 85
+    },
+    {
+      "name": "MongoDB",
+      "category": "Backend & Databases",
+      "percentage": 80
+    },
+    {
+      "name": "Java",
+      "category": "Languages",
+      "icon": "/uploads/ChatGPT_Image_Jun_14__2026__02_50_56_PM_1781429040875.png"
+    },
+    {
+      "name": "C",
+      "category": "Languages",
+      "icon": "https://cdn.simpleicons.org/c"
+    },
+    {
+      "name": "HTML",
+      "category": "Frontend",
+      "icon": "https://cdn.simpleicons.org/html5"
+    },
+    {
+      "name": "CSS",
+      "category": "Frontend",
+      "icon": "https://cdn.simpleicons.org/css"
+    },
+    {
+      "name": "Figma",
+      "category": "Frontend",
+      "icon": "https://cdn.simpleicons.org/figma"
+    },
+    {
+      "name": "FastAPI",
+      "category": "Backend & Databases",
+      "icon": "https://cdn.simpleicons.org/fastapi"
+    },
+    {
+      "name": "GitHub",
+      "category": "Cloud & Tools",
+      "icon": "https://cdn.simpleicons.org/github/_/fff"
+    },
+    {
+      "name": "Git",
+      "category": "Cloud & Tools",
+      "icon": "https://cdn.simpleicons.org/git"
+    },
+    {
+      "name": "N8N",
+      "category": "Cloud & Tools",
+      "icon": "https://cdn.simpleicons.org/n8n"
+    },
+    {
+      "name": "Kubernetes",
+      "category": "Cloud & Tools",
+      "icon": "https://cdn.simpleicons.org/kubernetes"
+    }
+  ],
+  "heroSideLabel": "Software Engineer • Remote",
+  "socialsList": [
+    {
+      "label": "GitHub",
+      "href": "https://github.com/Satwiksai36",
+      "logo": ""
+    },
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/satwiksaiveera/",
+      "logo": ""
+    },
+    {
+      "label": "LeetCode",
+      "href": "https://leetcode.com/u/satwik_sai36/",
+      "logo": ""
+    },
+    {
+      "label": "X",
+      "href": "https://x.com/satwiksai369",
+      "logo": ""
+    },
+    {
+      "label": "Instagram",
+      "href": "https://www.instagram.com/satwikk._.saiii/",
+      "logo": ""
+    }
+  ]
+}
