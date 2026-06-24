@@ -40,7 +40,7 @@ export async function POST(req: NextRequest) {
     // 2. Parse body data
     const newData = await req.json();
 
-    // 3. Write data (Netlify Blobs in production, local file in development)
+    // 3. Write data (Netlify Blobs in production, Vercel KV, or local file in development)
     const isNetlify = typeof process.env.SITE_ID !== 'undefined' || 
                       typeof process.env.AWS_LAMBDA_FUNCTION_NAME !== 'undefined' ||
                       typeof process.env.NETLIFY_IMAGES_CDN_DOMAIN !== 'undefined';
@@ -49,11 +49,27 @@ export async function POST(req: NextRequest) {
       const store = getStore('portfolio-data');
       await store.setJSON('data', newData);
     } else {
-      await fs.promises.writeFile(
-        DATA_FILE,
-        JSON.stringify(newData, null, 2),
-        'utf8'
-      );
+      const isVercelKV = typeof process.env.KV_REST_API_URL !== 'undefined' && 
+                         typeof process.env.KV_REST_API_TOKEN !== 'undefined';
+      if (isVercelKV) {
+        const response = await fetch(process.env.KV_REST_API_URL!, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${process.env.KV_REST_API_TOKEN!}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(['SET', 'data', JSON.stringify(newData)])
+        });
+        if (!response.ok) {
+          throw new Error(`Vercel KV REST API set-data error: ${response.statusText}`);
+        }
+      } else {
+        await fs.promises.writeFile(
+          DATA_FILE,
+          JSON.stringify(newData, null, 2),
+          'utf8'
+        );
+      }
     }
 
     return NextResponse.json({ success: true });

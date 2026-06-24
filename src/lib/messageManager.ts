@@ -29,6 +29,32 @@ export async function getMessages(): Promise<Message[]> {
     }
   }
 
+  // Check for Vercel KV REST API configuration
+  const isVercelKV = typeof process.env.KV_REST_API_URL !== 'undefined' && 
+                     typeof process.env.KV_REST_API_TOKEN !== 'undefined';
+  if (isVercelKV) {
+    try {
+      const response = await fetch(process.env.KV_REST_API_URL!, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${process.env.KV_REST_API_TOKEN!}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(['GET', 'messages'])
+      });
+      if (response.ok) {
+        const data = await response.json();
+        if (data && data.result) {
+          return JSON.parse(data.result) as Message[];
+        }
+      } else {
+        console.error('Vercel KV REST API get-messages error:', response.statusText);
+      }
+    } catch (kvError) {
+      console.error('Error reading messages from Vercel KV:', kvError);
+    }
+  }
+
   // Fallback to local file read
   try {
     if (fs.existsSync(MESSAGES_FILE)) {
@@ -62,15 +88,35 @@ export async function saveMessage(msg: Omit<Message, 'id' | 'timestamp'> & { id?
     const store = getStore('portfolio-data');
     await store.setJSON('messages', messages);
   } else {
-    const dir = path.dirname(MESSAGES_FILE);
-    if (!fs.existsSync(dir)) {
-      await fs.promises.mkdir(dir, { recursive: true });
+    const isVercelKV = typeof process.env.KV_REST_API_URL !== 'undefined' && 
+                       typeof process.env.KV_REST_API_TOKEN !== 'undefined';
+    if (isVercelKV) {
+      try {
+        const response = await fetch(process.env.KV_REST_API_URL!, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${process.env.KV_REST_API_TOKEN!}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(['SET', 'messages', JSON.stringify(messages)])
+        });
+        if (!response.ok) {
+          console.error('Vercel KV REST API set-messages error:', response.statusText);
+        }
+      } catch (kvError) {
+        console.error('Error writing messages to Vercel KV:', kvError);
+      }
+    } else {
+      const dir = path.dirname(MESSAGES_FILE);
+      if (!fs.existsSync(dir)) {
+        await fs.promises.mkdir(dir, { recursive: true });
+      }
+      await fs.promises.writeFile(
+        MESSAGES_FILE,
+        JSON.stringify(messages, null, 2),
+        'utf8'
+      );
     }
-    await fs.promises.writeFile(
-      MESSAGES_FILE,
-      JSON.stringify(messages, null, 2),
-      'utf8'
-    );
   }
   return newMessage;
 }
@@ -87,10 +133,30 @@ export async function deleteMessage(id: string): Promise<void> {
     const store = getStore('portfolio-data');
     await store.setJSON('messages', messages);
   } else {
-    await fs.promises.writeFile(
-      MESSAGES_FILE,
-      JSON.stringify(messages, null, 2),
-      'utf8'
-    );
+    const isVercelKV = typeof process.env.KV_REST_API_URL !== 'undefined' && 
+                       typeof process.env.KV_REST_API_TOKEN !== 'undefined';
+    if (isVercelKV) {
+      try {
+        const response = await fetch(process.env.KV_REST_API_URL!, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${process.env.KV_REST_API_TOKEN!}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(['SET', 'messages', JSON.stringify(messages)])
+        });
+        if (!response.ok) {
+          console.error('Vercel KV REST API set-messages error:', response.statusText);
+        }
+      } catch (kvError) {
+        console.error('Error writing messages to Vercel KV:', kvError);
+      }
+    } else {
+      await fs.promises.writeFile(
+        MESSAGES_FILE,
+        JSON.stringify(messages, null, 2),
+        'utf8'
+      );
+    }
   }
 }
