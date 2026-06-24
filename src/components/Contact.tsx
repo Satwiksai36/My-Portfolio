@@ -79,8 +79,7 @@ function ContactModal({ onClose }: { onClose: () => void }) {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Transition the UI instantly to the success state
-    setStatus('sent');
+    setStatus('sending');
 
     // Fire the email request asynchronously in the background
     fetch('/api/contact', {
@@ -88,15 +87,19 @@ function ContactModal({ onClose }: { onClose: () => void }) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(form),
     }).then((res) => {
-      if (!res.ok) {
+      if (res.ok) {
+        setStatus('sent');
+      } else {
+        setStatus('error');
         res.json().then((errData) => {
-          console.error('Background contact submission API error:', errData);
+          console.error('Contact submission API error:', errData);
         }).catch(() => {
-          console.error('Background contact submission failed with status:', res.status);
+          console.error('Contact submission failed with status:', res.status);
         });
       }
     }).catch((err) => {
-      console.error('Background contact submission network error:', err);
+      setStatus('error');
+      console.error('Contact submission network error:', err);
     });
   };
 

@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse, after } from 'next/server';
 import { Resend } from 'resend';
 import fs from 'fs';
 import path from 'path';
@@ -102,22 +102,29 @@ export async function POST(req: NextRequest) {
     const data = await getPortfolioData();
     const targetEmail = data.email || 'placeholder@example.com';
 
-    console.log(`Attempting to send contact form email from onboarding@resend.dev to ${targetEmail}...`);
+    // Send email asynchronously in the background after the response is sent to client
+    after(async () => {
+      console.log(`Attempting to send contact form email from onboarding@resend.dev to ${targetEmail}...`);
+      try {
+        const { data: resData, error } = await resend.emails.send({
+          from: 'Portfolio Contact <onboarding@resend.dev>',
+          to: targetEmail,
+          replyTo: email,
+          subject: subject ? `${subject} — ${name}` : `New message from ${name} — Portfolio`,
+          html: emailTemplate({ name, email, subject, message, data }),
+        });
 
-    const { data: resData, error } = await resend.emails.send({
-      from: 'Portfolio Contact <onboarding@resend.dev>',
-      to: targetEmail,
-      replyTo: email,
-      subject: subject ? `${subject} — ${name}` : `New message from ${name} — Portfolio`,
-      html: emailTemplate({ name, email, subject, message, data }),
+        if (error) {
+          console.error('Resend API Email Error (after):', error);
+        } else {
+          console.log('Resend API Email Success (after):', resData);
+        }
+      } catch (err) {
+        console.error('Resend API Email Exception (after):', err);
+      }
     });
 
-    if (error) {
-      console.error('Resend API Email Error:', error);
-      return NextResponse.json({ error }, { status: 500 });
-    }
-
-    console.log('Resend API Email Success:', resData);
+    // Return success immediately so the frontend transition is instantaneous
     return NextResponse.json({ success: true });
   } catch (err) {
     console.error('Contact API Unexpected Exception:', err);

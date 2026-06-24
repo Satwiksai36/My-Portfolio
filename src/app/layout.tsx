@@ -20,6 +20,7 @@ const specialGothic = Special_Gothic_Expanded_One({
   weight: '400',
   variable: '--font-special-gothic',
   display: 'swap',
+  adjustFontFallback: false,
 });
 
 export async function generateMetadata(): Promise<Metadata> {
